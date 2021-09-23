@@ -50,8 +50,9 @@
         <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
             {% csrf_token %}
             <!--{{form.as_p}}-->
+            <div class="form-group mt-4">Código de barras: {{form.codigo_barras}}</div>
             <div class="form-group mt-4 ">Nome do Produto: {{form.nome_produto}}</div>
-            <div class="form-group mt-4 ">Preço: {{form.preco}}</div>
+            <div class="form-group mt-4 ">Preço unitário: {{form.preco}}</div>
             <div class="form-group mt-4">Quantidade: {{form.quantidade}}</div>
             <input type="submit" class="btn btn-success mt-3" value="Salvar">
         </form>

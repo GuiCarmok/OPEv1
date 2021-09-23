@@ -50,9 +50,9 @@
         <table class="table thead-dark table-bordered">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">Código de barras</th>
                 <th scope="col">Produto</th>
-                <th scope="col">Preço</th>
+                <th scope="col">Preço em R$</th>
                 <th scope="col">Quantidade</th>
                 <th scope="col">Ações</th>
               </tr>
@@ -60,9 +60,9 @@
             <tbody>
               {% for dbs in db %}
               <tr>
-                <th>{{dbs.id}}</th>
+                <th>{{dbs.codigo_barras}}</th>
                 <td>{{dbs.nome_produto}}</td>
-                <td>{{dbs.preco}}</td> <!--preço está como int, correto seria float -->
+                <td>{{dbs.preco}}</td> 
                 <td>{{dbs.quantidade}}</td>
                 <td>
                   <a href="view/{{dbs.id}}" class="btn btn-dark">Visualizar</a>
